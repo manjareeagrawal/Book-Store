@@ -8,4 +8,4 @@ RUN apt-get update && apt-get install -y jdk openjdk:17
 
 ENV NAME World
 
-CMD["java","-jar","target/book-store.jar"]
+CMD["java","-jar","/book-store.jar"]
