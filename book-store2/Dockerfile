@@ -1,11 +1,4 @@
-FROM ubuntu:latest
+FROM openjdk:17
+ADD target/book-store.jar book-store.jar
+ENTRYPOINT ["java","-jar","/book-store.jar"]
 
-WORKDIR /app
-
-COPY . /app 
-
-RUN apt-get update && apt-get install -y jdk openjdk:17
-
-ENV NAME World
-
-CMD["java","-jar","/book-store.jar"]
